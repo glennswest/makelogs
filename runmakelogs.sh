@@ -1,2 +1,2 @@
 /app/bin/makelogs --verbose --trace --host elasticsearch:9200
-bash
+while true; do sleep 10000; done
