@@ -4,6 +4,6 @@ metadata:
   name: makelogs
 spec:
   containers:
-  - image: docker.io/glennswest/makelogs:23d1956
+  - image: docker.io/glennswest/makelogs:f3c2e2a
     name: makelogs
 
