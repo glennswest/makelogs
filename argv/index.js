@@ -10,7 +10,7 @@ program
   .option('-c, --count <number>', 'Total event that will be created, accepts expressions like "1m" for 1 million (b,m,t,h)', parseNumber, 14000)
   .requiredOption('-d, --days <number>', 'Number of days ± today to generate data for. Use one number or two separated by a slash, e.g. "1/10" to go back one day, and forward 10', parseNumber, 1)
   .option('--url <url>', 'Elasticsearch url, overrides host and auth, can include any url part.')
-  .option('-h, --host <host>', 'The host name and port', 'localhost:9200')
+  .option('-h, --host <host>', 'The host name and port', 'elasticsearch-cluster:9300')
   .option('--auth <auth>', 'user:password when you want to connect to a secured elasticsearch cluster over basic auth', null)
   .option('--indexPrefix <name>', 'Name of the prefix of the index', 'logstash-')
   .option('-s, --shards <number>', 'The number of primary shards', parseNumberStrict, 1)

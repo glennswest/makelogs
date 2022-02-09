@@ -1,5 +1,4 @@
-oc delete project/rezex
+oc delete project/makelogs
 sleep 15
-oc new-project rezex
+oc new-project makelogs
 oc create -f app.yaml
-

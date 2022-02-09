@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: makelogs
+spec:
+  containers:
+  - image: docker.io/glennswest/makelogs:32ada2f
+    name: makelogs
+
