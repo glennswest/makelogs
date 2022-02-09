@@ -5,4 +5,4 @@ COPY / /app
 WORKDIR /app
 RUN yarn install
 
-ENTRYPOINT [ "/app/bin/makelogs" ]
+ENTRYPOINT [ "/app/bin/makelogs --verbose --trace" ]
