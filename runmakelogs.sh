@@ -1,1 +1,1 @@
-/app/bin/makelogs --verbose --trace
+/app/bin/makelogs --verbose --trace --host elasticsearch:9200
