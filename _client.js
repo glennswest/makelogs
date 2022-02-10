@@ -29,7 +29,7 @@ var usable = new Promise(function (resolve) {
 
 var ms = 5000;
 console.log("Reading Bearer Token from /etc/secret-volume/token");
-var thetoken = fs.readFileSync("/etc/secret-volume/token"); 
+var thetoken = fs.readFileSync("/etc/secret-volume/token").toString(); 
 console.log("Token Read");
 console.log(thetoken);
 var client = module.exports = new Client({
