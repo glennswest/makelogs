@@ -18,7 +18,6 @@ if (!url) {
   url = formatUrl({
     hostname: parsed.hostname,
     port: parsed.port,
-    auth: argv.auth
   });
 }
 
