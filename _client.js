@@ -44,9 +44,14 @@ var client = module.exports = new Client({
       });
     })
   },
-  name: "makelogs",
-  host: url,
-  headers: {'Authorization:': authheader }
+  node: {
+       url: new URL('https://elasticsearch.openshift-logging:9200'),
+       name: 'makelogs',
+       auth: {
+             bearer: thetoken
+             }
+       //headers: {'Authorization:': authheader }
+       }
 });
 
 client.usable = usable;
