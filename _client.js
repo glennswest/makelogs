@@ -43,7 +43,7 @@ var client = module.exports = new Client({
     })
   },
   host: url,
-  auth: { 
+  httpAuth: { 
     bearer: thetoken
     }
 });
