@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var formatUrl = require('url').format;
 var argv = require('./argv');
 var through2 = require('through2');

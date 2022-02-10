@@ -1,3 +1,4 @@
+./delete.sh
 export GIT_COMMIT=$(git rev-parse --short HEAD)
 rm -r -f tmp
 mkdir tmp
