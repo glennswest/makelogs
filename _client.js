@@ -36,7 +36,7 @@ console.log(authheader);
 var client = module.exports = new Client({
   log: {
     type: 'stream',
-    level: 'trace','warning',
+    level: 'trace',
     stream: through2(function (chunk, enc, cb) {
       usable.then(function () {
         process.stdout.write(chunk, enc);
