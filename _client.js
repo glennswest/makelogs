@@ -31,7 +31,7 @@ var ms = 5000;
 console.log("Reading Bearer Token from /etc/secret-volume/token");
 var thetoken = fs.readFileSync("/etc/secret-volume/token").toString(); 
 console.log("Token Read");
-var authheader = 'bearer ' + thetoken;
+var authheader = 'Bearer ' + thetoken;
 console.log(authheader);
 var client = module.exports = new Client({
   log: {
