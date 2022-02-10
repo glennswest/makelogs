@@ -47,7 +47,6 @@ var client = module.exports = new Client({
   host: url,
   name: 'makelogs',
   headers: {'Authorization:': authheader }
-       }
 });
 
 client.usable = usable;
