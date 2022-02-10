@@ -1,0 +1,2 @@
+oc delete project/makelogs
+

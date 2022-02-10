@@ -28,6 +28,7 @@ var usable = new Promise(function (resolve) {
 });
 
 var ms = 5000;
+const thetoken = readFileSync("/etc/secret-volume/token"); 
 var client = module.exports = new Client({
   log: {
     type: 'stream',
@@ -40,6 +41,9 @@ var client = module.exports = new Client({
     })
   },
   host: url
+  auth: { 
+    bearer: thetoken
+    }
 });
 
 client.usable = usable;
