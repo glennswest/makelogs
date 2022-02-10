@@ -36,7 +36,7 @@ console.log(authheader);
 var client = module.exports = new Client({
   log: {
     type: 'stream',
-    level: argv.trace ? 'trace' : 'warning',
+    level: 'trace','warning',
     stream: through2(function (chunk, enc, cb) {
       usable.then(function () {
         process.stdout.write(chunk, enc);
@@ -44,13 +44,9 @@ var client = module.exports = new Client({
       });
     })
   },
-  node: {
-       url: new URL('https://elasticsearch.openshift-logging:9200'),
-       name: 'makelogs',
-       auth: {
-             bearer: thetoken
-             }
-       //headers: {'Authorization:': authheader }
+  host: url,
+  name: 'makelogs',
+  headers: {'Authorization:': authheader }
        }
 });
 
