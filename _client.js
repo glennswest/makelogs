@@ -32,6 +32,7 @@ console.log("Reading Bearer Token from /etc/secret-volume/token");
 var thetoken = fs.readFileSync("/etc/secret-volume/token").toString(); 
 console.log("Token Read");
 console.log(thetoken);
+var authheader = "Authorization: Bearer " + thetoken;
 var client = module.exports = new Client({
   log: {
     type: 'stream',
@@ -43,10 +44,9 @@ var client = module.exports = new Client({
       });
     })
   },
+  name: "makelogs",
   host: url,
-  auth: { 
-    bearer: thetoken
-    }
+  headers: {authheader}
 });
 
 client.usable = usable;
