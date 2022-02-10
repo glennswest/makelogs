@@ -4,7 +4,7 @@ metadata:
   name: makelogs
 spec:
   containers:
-  - image: docker.io/glennswest/makelogs:f3b6439
+  - image: docker.io/glennswest/makelogs:258ef33
     name: makelogs
     volumeMounts:
        - name: secret-volume
